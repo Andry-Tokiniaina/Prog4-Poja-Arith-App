@@ -1,4 +1,4 @@
-package com.example.demo.endpoint.rest.controller.health;
+package com.example.demo.service;
 
 import com.example.demo.PojaGenerated;
 import lombok.AllArgsConstructor;
