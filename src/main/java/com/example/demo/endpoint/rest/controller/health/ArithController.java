@@ -12,23 +12,23 @@ public class ArithController {
   private ArithService service;
 
   @GetMapping("/add")
-  public double add(@RequestParam  int a,@RequestParam int b) {
+  public double add(@RequestParam int a, @RequestParam int b) {
 
     return service.add(a, b);
   }
 
   @GetMapping("/substrate")
-  public double subtract(@RequestParam  int a,@RequestParam int b) {
+  public double subtract(@RequestParam int a, @RequestParam int b) {
     return service.subtract(a, b);
   }
 
   @GetMapping("/multiply")
-  public double multiply(@RequestParam  int a,@RequestParam int b) {
+  public double multiply(@RequestParam int a, @RequestParam int b) {
     return service.multiply(a, b);
   }
 
   @GetMapping("/divide")
-  public double divide(@RequestParam  int a,@RequestParam int b) {
+  public double divide(@RequestParam int a, @RequestParam int b) {
     return service.divide(a, b);
   }
 }
