@@ -1,7 +1,9 @@
-package com.example.demo.service;
+package com.example.demo.endpoint.rest.controller.health;
 
+import com.example.demo.service.ArithService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -10,22 +12,23 @@ public class ArithController {
   private ArithService service;
 
   @GetMapping("/add")
-  public double add(int a, int b) {
+  public double add(@RequestParam  int a,@RequestParam int b) {
+
     return service.add(a, b);
   }
 
   @GetMapping("/substrate")
-  public double subtract(int a, int b) {
+  public double subtract(@RequestParam  int a,@RequestParam int b) {
     return service.subtract(a, b);
   }
 
   @GetMapping("/multiply")
-  public double multiply(int a, int b) {
+  public double multiply(@RequestParam  int a,@RequestParam int b) {
     return service.multiply(a, b);
   }
 
   @GetMapping("/divide")
-  public double divide(int a, int b) {
+  public double divide(@RequestParam  int a,@RequestParam int b) {
     return service.divide(a, b);
   }
 }
